@@ -1,0 +1,67 @@
+docstring = """ 
+    CS03B - Winter 2026                                    
+    Assignment 1 - Question 2                                        
+    Student Name: Erendira Terrazas            
+    SID: 20711940                                                  
+"""
+
+def run():
+    """
+    Students should implement their code for Question 2 inside this function.
+    """
+    # TODO: Write your code here
+    print("Hello from Question 2!")
+    triangle1 = Triangle(4, 5, 6)
+    triangle2 = Triangle(3, 4, 5)
+
+    print(triangle1.toString())
+    print(f"The area and perimeter of triangle 1 is: {triangle1.getArea():.2f} and {triangle1.getPerimeter():.2f}")
+
+    print(triangle2.toString())
+    print(f"The area and perimeter of triangle 2 is: {triangle2.getArea():.2f} and {triangle2.getPerimeter():.2f}")
+
+import math
+
+class Triangle:
+    """Defines a triangle class with sides side1, side2, and side3 as well as defining
+    the area and perimeter."""
+
+    def __init__(self, side1=1.0, side2=1.0, side3=1.0):
+        """Initializes the triangle with sides side1, side2, and side3"""
+        self._side1 = side1
+        self._side2 = side2
+        self._side3 = side3
+
+    def get_side1(self):
+        """Getter for side1"""
+        return self._side1
+
+    def get_side2(self):
+        """Getter for side2"""
+        return self._side2
+
+    def get_side3(self):
+        """Getter for side3"""
+        return self._side3
+
+    def getArea(self):
+        """Method that returns the area of the triangle"""
+        s = (self._side1 + self._side2 + self._side3) / 2
+        area = math.sqrt(s * (s - self._side1) * (s - self._side2) * (s - self._side3))
+        return area
+
+    def getPerimeter(self):
+        """Method that returns the perimeter of the triangle"""
+        return self._side1 + self._side2 + self._side3
+
+    def toString(self):
+        print(f"This is triangle with side 1 = {self._side1}, side 2 = {self._side2}, side 3 = {self._side3}")
+        return True
+    # Example logic:
+    # result = 5 + 5
+    # print(f"Result: {result}")
+
+if __name__ == "__main__":
+    # This allows students to run this specific file
+    # individually for testing (e.g., `python q1.py`)
+    run()
