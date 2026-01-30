@@ -14,7 +14,7 @@ def run():
     name = input("Enter employee name: ")
     number = input("Enter employee number: ")
     shift = int(input("Enter shift number (1 = Day, 2 = Night): "))
-    pay_rate = float(input("Enter hourly pay rate: "))
+    hourly_pay_rate = float(input("Enter hourly pay rate: "))
 
 class Employee:
     """A class that saves the employee's information."""
